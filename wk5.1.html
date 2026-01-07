@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Greeting</title>
+</head>
+<body>
+
+<h1 id="greeting"></h1>
+
+<script>
+  const currentHour = new Date().getHours();
+  let message;
+
+  if (currentHour < 12) {
+    message = "Good Morning!";
+  } else if (currentHour < 18) {
+    message = "Good Afternoon!";
+  } else {
+    message = "Good Evening!";
+  }
+
+  document.getElementById("greeting").textContent = message;
+</script>
+
+</body>
+</html>
